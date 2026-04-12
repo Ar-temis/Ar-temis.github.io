@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Temuulen Enkhtamir</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Grid background -->
+  <div class="nvim-bg"></div>
+
+  <!-- Tab bar / Nav -->
+  <nav class="page-nav">
+    <div class="page-nav-tabs">
+      <a href="../index.html" class="page-nav-tab">
+        <span class="page-nav-tab-icon" style="color: var(--blue);">&#9679;</span> dashboard
+      </a>
+      <a href="../projects.html" class="page-nav-tab">
+        <span class="page-nav-tab-icon" style="color: var(--yellow);">&#9679;</span> projects
+      </a>
+      <a href="index.html" class="page-nav-tab active">
+        <span class="page-nav-tab-icon" style="color: var(--green);">&#9679;</span> blog
+      </a>
+    </div>
+    <div class="page-nav-right">
+      <span id="mobile-toggle" style="cursor: pointer; display: none;">&#9776;</span>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div id="mobile-menu" class="mobile-drawer">
+    <a href="../index.html">&#9656; Dashboard</a>
+    <a href="../projects.html">&#9656; Projects</a>
+    <a href="index.html" class="active">&#9656; Blog</a>
+  </div>
+
+  <!-- Line numbers gutter -->
+  <div class="line-gutter" aria-hidden="true"></div>
+
+  <!-- Blog Post Content -->
+  <div class="page-content">
+    <article style="max-width: 720px; margin: 0 auto; padding: 1.5rem;">
+
+      <!-- Post Header (populated by JS) -->
+      <a href="index.html" class="post-back">&larr; :Telescope blog</a>
+      <h1 id="post-title" class="post-header-title"></h1>
+      <div id="post-meta" class="post-header-meta"></div>
+
+      <!-- Rendered Markdown goes here -->
+      <div id="post-content" class="prose-custom">
+        <span style="color: var(--fg-dark);">Loading post...</span>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- Statusline -->
+  <div class="statusline">
+    <div class="st-mode">NORMAL</div>
+    <div class="statusline-section st-file" id="st-file-name">~/blog/post</div>
+    <div class="st-right">
+      <div class="st-pos">Ln 1, Col 1</div>
+      <div class="st-filetype">markdown</div>
+    </div>
+  </div>
+
+  <!-- marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/blog.js"></script>
+</body>
+</html>
