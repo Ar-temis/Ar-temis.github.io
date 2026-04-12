@@ -173,32 +173,72 @@ async function renderBlogList() {
       renderResults(filtered);
     });
 
-    // Keyboard navigation
+    // Escape blurs the search input, entering "normal" mode
     searchInput.addEventListener('keydown', (e) => {
-      const items = container.querySelectorAll('.telescope-result-item');
-      const currentPosts = searchInput.value.trim()
-        ? allPosts.filter(p =>
-            p.title.toLowerCase().includes(searchInput.value.toLowerCase().trim()) ||
-            p.description.toLowerCase().includes(searchInput.value.toLowerCase().trim())
-          )
-        : allPosts;
-
-      if (e.key === 'ArrowDown' || (e.ctrlKey && e.key === 'j')) {
+      if (e.key === 'Escape') {
         e.preventDefault();
-        if (activeIndex < currentPosts.length - 1) {
-          setActive(activeIndex + 1, currentPosts);
-          items[activeIndex]?.scrollIntoView({ block: 'nearest' });
-        }
-      } else if (e.key === 'ArrowUp' || (e.ctrlKey && e.key === 'k')) {
+        searchInput.blur();
+        return;
+      }
+      if (e.key === 'ArrowDown') {
         e.preventDefault();
-        if (activeIndex > 0) {
-          setActive(activeIndex - 1, currentPosts);
-          items[activeIndex]?.scrollIntoView({ block: 'nearest' });
-        }
+        navigateDown();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        navigateUp();
       } else if (e.key === 'Enter') {
         e.preventDefault();
-        const activeItem = container.querySelector('.telescope-result-item.active');
-        if (activeItem) window.location.href = activeItem.href;
+        openActive();
+      }
+    });
+
+    function getCurrentPosts() {
+      const q = searchInput.value.toLowerCase().trim();
+      if (!q) return allPosts;
+      return allPosts.filter(p =>
+        p.title.toLowerCase().includes(q) ||
+        p.description.toLowerCase().includes(q)
+      );
+    }
+
+    function navigateDown() {
+      const posts = getCurrentPosts();
+      if (activeIndex < posts.length - 1) {
+        setActive(activeIndex + 1, posts);
+        container.querySelectorAll('.telescope-result-item')[activeIndex]?.scrollIntoView({ block: 'nearest' });
+      }
+    }
+
+    function navigateUp() {
+      const posts = getCurrentPosts();
+      if (activeIndex > 0) {
+        setActive(activeIndex - 1, posts);
+        container.querySelectorAll('.telescope-result-item')[activeIndex]?.scrollIntoView({ block: 'nearest' });
+      }
+    }
+
+    function openActive() {
+      const activeItem = container.querySelector('.telescope-result-item.active');
+      if (activeItem) window.location.href = activeItem.href;
+    }
+
+    // Global j/k/Enter navigation when search is not focused
+    document.addEventListener('keydown', (e) => {
+      if (document.activeElement === searchInput) return;
+
+      if (e.key === 'j') {
+        e.preventDefault();
+        navigateDown();
+      } else if (e.key === 'k') {
+        e.preventDefault();
+        navigateUp();
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        openActive();
+      } else if (e.key === 'i' || e.key === '/') {
+        // Press i or / to focus search (like Vim insert mode)
+        e.preventDefault();
+        searchInput.focus();
       }
     });
 

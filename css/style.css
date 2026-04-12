@@ -1,7 +1,8 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
 /* ===================================
    NvChad-inspired Terminal Portfolio
    =================================== */
-
 :root {
   /* Base46 OneDark palette */
   --bg-dark: #1a1b26;
@@ -38,7 +39,7 @@ html {
 body {
   background-color: var(--bg);
   color: var(--fg);
-  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-family: 'JetBrainsMono Nerd', 'Fira Code', 'Cascadia Code', monospace;
   font-size: 16px;
   line-height: 1.6;
   min-height: 100vh;
@@ -86,44 +87,6 @@ body::before {
   background: var(--fg-dark);
 }
 
-/* ===================================
-   Cursor blink animation
-   =================================== */
-@keyframes blink {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
-
-.cursor-blink {
-  animation: blink 1s step-end infinite;
-}
-
-/* ===================================
-   Character-by-character type effect
-   =================================== */
-@keyframes typeIn {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-.type-line {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid var(--cursor);
-  animation: typeIn 0.6s steps(30) forwards;
-}
 
 /* ===================================
    NvDash Landing Page
@@ -167,23 +130,7 @@ body::before {
   text-align: center;
   white-space: pre;
   margin-bottom: 2rem;
-  text-shadow: 0 0 20px rgba(97, 175, 239, 0.3);
-  opacity: 0;
-  animation: fadeGlow 1s ease-out 0.2s forwards;
-}
-
-@keyframes fadeGlow {
-  0% {
-    opacity: 0;
-    text-shadow: 0 0 0 rgba(97, 175, 239, 0);
-    transform: translateY(-10px);
-  }
-
-  100% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(97, 175, 239, 0.25), 0 0 60px rgba(97, 175, 239, 0.1);
-    transform: translateY(0);
-  }
+  text-shadow: 0 0 30px rgba(97, 175, 239, 0.25), 0 0 60px rgba(97, 175, 239, 0.1);
 }
 
 /* Dashboard title */
@@ -193,28 +140,12 @@ body::before {
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
-  opacity: 0;
-  animation: fadeIn 0.5s ease-out 0.8s forwards;
 }
 
 .nvdash-tagline {
   color: var(--fg-dim);
   font-size: 0.85rem;
   margin-bottom: 3rem;
-  opacity: 0;
-  animation: fadeIn 0.5s ease-out 1s forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Dashboard menu items */
@@ -235,40 +166,6 @@ body::before {
   text-decoration: none;
   border-radius: 4px;
   transition: all 0.15s ease;
-  opacity: 0;
-  animation: slideIn 0.4s ease-out forwards;
-}
-
-.nvdash-item:nth-child(1) {
-  animation-delay: 1.2s;
-}
-
-.nvdash-item:nth-child(2) {
-  animation-delay: 1.35s;
-}
-
-.nvdash-item:nth-child(3) {
-  animation-delay: 1.5s;
-}
-
-.nvdash-item:nth-child(4) {
-  animation-delay: 1.65s;
-}
-
-.nvdash-item:nth-child(5) {
-  animation-delay: 1.8s;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-12px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .nvdash-item:hover {
@@ -913,7 +810,7 @@ body::before {
 }
 
 .prose-custom code {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'JetBrainsMono Nerd Font', monospace;
   background-color: var(--bg-light);
   padding: 0.15rem 0.4rem;
   border-radius: 3px;
