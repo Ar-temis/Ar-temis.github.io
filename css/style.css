@@ -39,7 +39,7 @@ html {
 body {
   background-color: var(--bg);
   color: var(--fg);
-  font-family: 'JetBrainsMono Nerd', 'Fira Code', 'Cascadia Code', monospace;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
   font-size: 16px;
   line-height: 1.6;
   min-height: 100vh;
@@ -525,6 +525,7 @@ body::before {
   font-weight: 700;
   font-size: 1rem;
   margin-bottom: 1.5rem;
+  padding-top: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -552,7 +553,6 @@ body::before {
   display: flex;
   gap: 0.75rem;
   padding: 0.75rem 0;
-  border-bottom: 1px solid var(--border);
   transition: background-color 0.15s ease;
 }
 
@@ -591,9 +591,9 @@ body::before {
 }
 
 .exp-tree-period {
-  color: var(--fg-dark);
+  color: var(--fg);
   font-size: 0.75rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.15rem;
 }
 
 .exp-tree-desc {
@@ -651,6 +651,7 @@ body::before {
 .project-card-filename {
   color: var(--white);
   flex: 1;
+  font-size: 1rem;
 }
 
 .project-card-links {
@@ -659,14 +660,14 @@ body::before {
 }
 
 .project-card-link {
-  color: var(--fg-dark);
+  color: var(--yellow);
   text-decoration: none;
   transition: color 0.15s ease;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .project-card-link:hover {
-  color: var(--blue);
+  color: var(--orange);
 }
 
 .project-card-body {
@@ -810,7 +811,7 @@ body::before {
 }
 
 .prose-custom code {
-  font-family: 'JetBrainsMono Nerd Font', monospace;
+  font-family: 'JetBrains Mono', monospace;
   background-color: var(--bg-light);
   padding: 0.15rem 0.4rem;
   border-radius: 3px;

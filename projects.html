@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects - Temuulen Enkhtamir</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
 
@@ -51,6 +49,23 @@
   <div class="page-content">
     <div style="max-width: 800px; margin: 0 auto; padding: 1.5rem;">
 
+      <!-- Education Section -->
+      <div class="section-header">Education</div>
+
+      <div class="exp-tree">
+
+        <!-- Experience Item 1 (placeholder) -->
+        <div class="exp-tree-item">
+          <div class="exp-tree-branch">&#9492;&#9472;</div>
+          <div class="exp-tree-content">
+            <div class="exp-tree-title">Dual B.S. Degree, Applied Mathematics and Computational Sciences</div>
+            <div class="exp-tree-company">Duke University</div>
+            <div class="exp-tree-period">Aug 2023 - May 2027</div>
+          </div>
+        </div>
+
+      </div>
+
       <!-- Experience Section -->
       <div class="section-header">Experience</div>
 
@@ -60,12 +75,22 @@
         <div class="exp-tree-item">
           <div class="exp-tree-branch">&#9500;&#9472;</div>
           <div class="exp-tree-content">
-            <div class="exp-tree-title">Your Role Title</div>
-            <div class="exp-tree-company">Company / Organization</div>
-            <div class="exp-tree-period">2025 - Present</div>
+            <div class="exp-tree-title">Project Manager / Software Engineer</div>
+            <div class="exp-tree-company"><a href="https://chatdku.com" target="_blank">ChatDKU.com</a></div>
+            <div class="exp-tree-period">March 2025 - Present</div>
             <div class="exp-tree-desc">
-              <!-- TODO: Replace with your actual experience -->
-              Describe what you did, what impact you had, and what technologies you used.
+              Developed ChatDKU.com, a campus-wide agentic <u><b>Retrieval-Augmented Generation (RAG)</b></u> chatbot
+              that
+              serves
+              the
+              daily queries of <b>2,000</b> students and faculty. Secured <b>$100,000 in university funding</b> to
+              support a
+              locally hosted LLM inference server. Since becoming project manager in December 2025, led a
+              12-student team by implementing <b>Agile workflows</b> and overseeing stand-ups and sprint planning. Also
+              designed the core agent logic and tool orchestration system, enabling the LLM to dynamically select,
+              invoke, and chain specialized tools for complex multi-step reasoning, while building ingestion pipelines
+              with LlamaIndex and LangChain to process and embed diverse documents into a Chroma vector database with
+              Redis supporting keyword search.
             </div>
           </div>
         </div>
@@ -74,11 +99,14 @@
         <div class="exp-tree-item">
           <div class="exp-tree-branch">&#9492;&#9472;</div>
           <div class="exp-tree-content">
-            <div class="exp-tree-title">Previous Role</div>
-            <div class="exp-tree-company">Company / Organization</div>
-            <div class="exp-tree-period">2024 - 2025</div>
+            <div class="exp-tree-title">Teaching Assistant</div>
+            <div class="exp-tree-company">CS204: Intro to AI</div>
+            <div class="exp-tree-period">January 2026 - March 2026</div>
             <div class="exp-tree-desc">
-              Describe what you did, what impact you had, and what technologies you used.
+              Taught Reinforcement Learning concepts such as MDP, Value/Policy Iterations, Monte-Carlo, TD
+              learning, and Q learning.
+              Designed homeworks and coding projects for students to practically learn heavy math concepts in
+              bite-sized code.
             </div>
           </div>
         </div>
@@ -86,24 +114,29 @@
       </div>
 
       <!-- Projects Section -->
-      <div class="section-header" style="margin-top: 3rem;">Projects</div>
+      <div class="section-header">Projects</div>
 
       <div class="project-list">
 
         <!-- Project Card 1 -->
         <div class="project-card">
           <div class="project-card-header">
-            <span class="project-card-filename">project_1.rs</span>
+            <span class="project-card-filename">DroneWQ</span>
             <div class="project-card-links">
-              <!-- TODO: Replace # with your actual links -->
-              <a href="#" class="project-card-link">[src]</a>
-              <a href="#" class="project-card-link">[live]</a>
+              <a href="https://github.com/aewindle110/DroneWQ" class="project-card-link">[src]</a>
+              <a href="https://pypi.org/project/dronewq/" class="project-card-link">[pypi]</a>
             </div>
           </div>
           <div class="project-card-body">
-            <div class="project-card-name">Project Name</div>
             <div class="project-card-desc">
-              Describe the project: what problem it solves, what you learned building it, and what makes it interesting.
+              Developed a python package, under the guidance of <a href="https://annaewindle.com/">Prof. Anna Windle</a>
+              from NASA, that can be used to
+              analyze multi-spectral data collected from a drone to derive ocean color radiometry and water quality
+              properties.
+              Made a desktop front-end using Electron for this package, and built an ArcGIS plugin for generating
+              water-quality maps.
+              Led the architectural refactor of a legacy monolithic codebase into a modular OOP system, improving
+              maintainability, scalability, and achieving a 100× reduction in execution time.
             </div>
             <div class="project-card-tech">
               <span>Tech 1</span>
