@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Temuulen Enkhtamir</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" media="print"
+    onload="this.media='all'">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Grid background -->
+  <div class="nvim-bg"></div>
+
+  <!-- Tab bar / Nav -->
+  <nav class="page-nav">
+    <div class="page-nav-tabs">
+      <a href="index.html" class="page-nav-tab">
+        <span class="page-nav-tab-icon" style="color: var(--blue);">&#9679;</span> dashboard
+      </a>
+      <a href="about.html" class="page-nav-tab active">
+        <span class="page-nav-tab-icon" style="color: var(--purple);">&#9679;</span> about
+      </a>
+      <a href="projects.html" class="page-nav-tab">
+        <span class="page-nav-tab-icon" style="color: var(--yellow);">&#9679;</span> projects
+      </a>
+      <a href="blog/index.html" class="page-nav-tab">
+        <span class="page-nav-tab-icon" style="color: var(--green);">&#9679;</span> blog
+      </a>
+    </div>
+    <div class="page-nav-right">
+      <span id="mobile-toggle" style="cursor: pointer; display: none;">&#9776;</span>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div id="mobile-menu" class="mobile-drawer">
+    <a href="index.html">&#9656; Dashboard</a>
+    <a href="about.html" class="active">&#9656; About</a>
+    <a href="projects.html">&#9656; Projects</a>
+    <a href="blog/index.html">&#9656; Blog</a>
+  </div>
+
+  <!-- Page content -->
+  <div class="page-content">
+    <div style="max-width: 720px; margin: 0 auto; padding: 1.5rem;">
+
+      <div class="section-header">About Me</div>
+
+      <div class="about-content">
+        <p>
+          Hi, I'm Temuulen Enkhtamir — a developer who is trying to survive the
+          junior to senior pipeline. I'm currently pursuing a B.S. degree in
+          Applied Mathematics and Computational Sciences at Duke University.
+        </p>
+
+        <p>
+          I like to believe in karma so I build things that I think will help
+          people and the world. My research interests include machine learning,
+          software architecture design, and natural language processing.
+        </p>
+
+        <p>
+          I am currently working as a project manager for my university's chatbot
+          system ChatDKU!
+        </p>
+      </div>
+
+      <div class="section-header" style="margin-top: 3rem;">Skills & Interests</div>
+
+      <div class="about-content">
+        <!-- TODO: Replace with your actual skills -->
+        <p>
+          Here are some technologies I've been working with:
+        </p>
+        <ul class="about-skills">
+          <li>Python</li>
+          <li>LangChain / LlamaIndex</li>
+          <li>Go</li>
+          <li>LLMs / RAG / AI Agents</li>
+          <li>JavaScript / TypeScript</li>
+          <li>Git / Linux / Neovim</li>
+        </ul>
+      </div>
+
+      <div class="section-header" style="margin-top: 3rem;">Contact</div>
+
+      <div class="about-content">
+        <p>
+          Feel free to reach out if you'd like to collaborate or just say hi.
+        </p>
+        <ul class="about-links">
+          <li><span style="color: var(--fg-dim);">email</span> &rarr; <a
+              href="mailto:temuulen.enkhtamir@dukekunshan.edu.cn">temuulen.enkhtamir@dukekunshan.edu.cn</a></li>
+          <li><span style="color: var(--fg-dim);">github</span> &rarr; <a href="https://github.com/Ar-temis"
+              target="_blank">github.com/Ar-temis</a></li>
+          <li><span style="color: var(--fg-dim);">linkedin</span> &rarr; <a
+              href="https://www.linkedin.com/in/e-temuulen/" target="_blank">linkedin.com/in/e-temuulen</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Statusline -->
+  <div class="statusline">
+    <div class="st-mode">NORMAL</div>
+    <div class="statusline-section st-file">~/about.md</div>
+    <div class="st-right">
+      <div class="st-pos">Ln 1, Col 1</div>
+      <div class="st-filetype">markdown</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

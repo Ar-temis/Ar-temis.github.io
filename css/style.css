@@ -1,4 +1,45 @@
-@import "https://www.nerdfonts.com/assets/css/webfont.css";
+/* ===================================
+   Nerd Font icons — self-hosted, only the 5 we use
+   =================================== */
+@font-face {
+  font-family: 'NerdFontsSymbols';
+  src: url('../assets/fonts/nerd-symbols.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.nf {
+  font-family: 'NerdFontsSymbols';
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nf-oct-person:before {
+  content: "\f415";
+}
+
+.nf-fa-code:before {
+  content: "\f121";
+}
+
+.nf-fa-book:before {
+  content: "\f02d";
+}
+
+.nf-fa-github:before {
+  content: "\f09b";
+}
+
+.nf-fa-linkedin:before {
+  content: "\f0e1";
+}
+
+.nf-fa-envelope:before {
+  content: "\f0e0";
+}
 
 /* ===================================
    NvChad-inspired Terminal Portfolio
@@ -10,10 +51,10 @@
   --bg-lighter: #252931;
   --bg-light: #2c313a;
   --bg-highlight: #363b45;
-  --fg: #abb2bf;
-  --fg-dim: #6b727f;
-  --fg-dark: #495162;
-  --white: #c8ccd4;
+  --fg: #bcc2cd;
+  --fg-dim: #7d8590;
+  --fg-dark: #545d6e;
+  --white: #d6dae2;
   --green: #98c379;
   --blue: #61afef;
   --purple: #c678dd;
@@ -133,6 +174,17 @@ body::before {
   text-shadow: 0 0 30px rgba(97, 175, 239, 0.25), 0 0 60px rgba(97, 175, 239, 0.1);
 }
 
+/* Profile avatar */
+.nvdash-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  margin-bottom: 1.25rem;
+  box-shadow: 0 0 20px rgba(97, 175, 239, 0.1);
+}
+
 /* Dashboard title */
 .nvdash-name {
   color: var(--green);
@@ -143,9 +195,10 @@ body::before {
 }
 
 .nvdash-tagline {
-  color: var(--fg-dim);
+  color: var(--fg);
   font-size: 0.85rem;
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 /* Dashboard menu items */
@@ -494,28 +547,6 @@ body::before {
   z-index: 1;
 }
 
-/* Line numbers gutter effect */
-.line-gutter {
-  position: absolute;
-  left: 0;
-  top: 48px;
-  bottom: 44px;
-  width: 48px;
-  background-color: var(--bg-dark);
-  border-right: 1px solid var(--border);
-  z-index: 0;
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .line-gutter {
-    display: block;
-  }
-
-  .page-content {
-    padding-left: 64px;
-  }
-}
 
 /* ===================================
    Projects page — terminal style
@@ -523,7 +554,7 @@ body::before {
 .section-header {
   color: var(--purple);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.15rem;
   margin-bottom: 1.5rem;
   padding-top: 1rem;
   display: flex;
@@ -580,26 +611,47 @@ body::before {
 .exp-tree-title {
   color: var(--green);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 0.15rem;
 }
 
 .exp-tree-company {
   color: var(--blue);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-bottom: 0.15rem;
 }
 
+.exp-tree-company a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.exp-tree-company a:hover {
+  color: var(--cyan);
+  text-decoration: underline;
+}
+
 .exp-tree-period {
-  color: var(--fg);
-  font-size: 0.75rem;
+  color: var(--fg-dim);
+  font-size: 0.8rem;
   margin-bottom: 0.15rem;
 }
 
 .exp-tree-desc {
   color: var(--fg);
-  font-size: 0.8rem;
-  line-height: 1.6;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.exp-tree-desc a {
+  color: var(--cyan);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.exp-tree-desc a:hover {
+  color: var(--blue);
 }
 
 /* Project cards — floating window style */
@@ -664,6 +716,8 @@ body::before {
   text-decoration: none;
   transition: color 0.15s ease;
   font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .project-card-link:hover {
@@ -683,9 +737,19 @@ body::before {
 
 .project-card-desc {
   color: var(--fg);
-  font-size: 0.8rem;
-  line-height: 1.6;
+  font-size: 0.85rem;
+  line-height: 1.7;
   margin-bottom: 0.75rem;
+}
+
+.project-card-desc a {
+  color: var(--cyan);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.project-card-desc a:hover {
+  color: var(--blue);
 }
 
 .project-card-tech {
@@ -696,7 +760,59 @@ body::before {
 
 .project-card-tech span {
   color: var(--yellow);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
+}
+
+/* ===================================
+   About page
+   =================================== */
+.about-content {
+  color: var(--fg);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+}
+
+.about-content a {
+  color: var(--cyan);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.about-content a:hover {
+  color: var(--blue);
+}
+
+.about-skills {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem 2rem;
+}
+
+.about-skills li {
+  color: var(--fg);
+  font-size: 0.85rem;
+}
+
+.about-skills li::before {
+  content: '▸ ';
+  color: var(--green);
+}
+
+.about-links {
+  list-style: none;
+  padding: 0;
+}
+
+.about-links li {
+  color: var(--fg);
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
 }
 
 /* ===================================
@@ -738,7 +854,7 @@ body::before {
 .prose-custom {
   color: var(--fg);
   line-height: 1.8;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .prose-custom h1 {

@@ -6,8 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects - Temuulen Enkhtamir</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" media="print"
+    onload="this.media='all'">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,6 +27,9 @@
     <div class="page-nav-tabs">
       <a href="index.html" class="page-nav-tab">
         <span class="page-nav-tab-icon" style="color: var(--blue);">&#9679;</span> dashboard
+      </a>
+      <a href="about.html" class="page-nav-tab">
+        <span class="page-nav-tab-icon" style="color: var(--purple);">&#9679;</span> about
       </a>
       <a href="projects.html" class="page-nav-tab active">
         <span class="page-nav-tab-icon" style="color: var(--yellow);">&#9679;</span> projects
@@ -38,12 +46,10 @@
   <!-- Mobile drawer -->
   <div id="mobile-menu" class="mobile-drawer">
     <a href="index.html">&#9656; Dashboard</a>
+    <a href="about.html">&#9656; About</a>
     <a href="projects.html" class="active">&#9656; Projects</a>
     <a href="blog/index.html">&#9656; Blog</a>
   </div>
-
-  <!-- Line numbers gutter -->
-  <div class="line-gutter" aria-hidden="true"></div>
 
   <!-- Page content -->
   <div class="page-content">
@@ -139,11 +145,9 @@
               maintainability, scalability, and achieving a 100× reduction in execution time.
             </div>
             <div class="project-card-tech">
-              <span>Tech 1</span>
+              <span>Python</span>
               <span>&middot;</span>
-              <span>Tech 2</span>
-              <span>&middot;</span>
-              <span>Tech 3</span>
+              <span>Numpy</span>
             </div>
           </div>
         </div>
@@ -151,85 +155,67 @@
         <!-- Project Card 2 -->
         <div class="project-card">
           <div class="project-card-header">
-            <span class="project-card-filename">project_2.py</span>
+            <span class="project-card-filename">Course Recommendation</span>
             <div class="project-card-links">
-              <a href="#" class="project-card-link">[src]</a>
-              <a href="#" class="project-card-link">[live]</a>
+              <a href="https://github.com/Ar-temis/Course-Recommendation" class="project-card-link">[src]</a>
             </div>
           </div>
           <div class="project-card-body">
-            <div class="project-card-name">Project Name</div>
             <div class="project-card-desc">
-              Describe the project: what problem it solves, what you learned building it, and what makes it interesting.
+              As a student you have to find what courses are available, which ones go together, and which ones you need
+              for you major. Finally, you have to schedule them, and if they don't match you find yourself back at
+              square one.
+
+              So, what if there was an assistant that just gives you all the available options and you choose from
+              there? That's what my AI assistant is exactly doing for you.
+
             </div>
             <div class="project-card-tech">
-              <span>Tech 1</span>
+              <span>LLM</span>
               <span>&middot;</span>
-              <span>Tech 2</span>
+              <span>SQL</span>
+              <span>&middot;</span>
+              <span>Python</span>
             </div>
           </div>
         </div>
 
         <!-- Project Card 3 -->
-        <div class="project-card">
-          <div class="project-card-header">
-            <span class="project-card-filename">project_3.ts</span>
-            <div class="project-card-links">
-              <a href="#" class="project-card-link">[src]</a>
-              <a href="#" class="project-card-link">[live]</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <div class="project-card-name">Project Name</div>
-            <div class="project-card-desc">
-              Describe the project: what problem it solves, what you learned building it, and what makes it interesting.
-            </div>
-            <div class="project-card-tech">
-              <span>Tech 1</span>
-              <span>&middot;</span>
-              <span>Tech 2</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card 4 -->
-        <div class="project-card">
-          <div class="project-card-header">
-            <span class="project-card-filename">project_4.go</span>
-            <div class="project-card-links">
-              <a href="#" class="project-card-link">[src]</a>
-              <a href="#" class="project-card-link">[live]</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <div class="project-card-name">Project Name</div>
-            <div class="project-card-desc">
-              Describe the project: what problem it solves, what you learned building it, and what makes it interesting.
-            </div>
-            <div class="project-card-tech">
-              <span>Tech 1</span>
-              <span>&middot;</span>
-              <span>Tech 2</span>
-            </div>
-          </div>
-        </div>
+        <!-- <div class="project-card"> -->
+        <!--   <div class="project-card-header"> -->
+        <!--     <span class="project-card-filename">project_3.ts</span> -->
+        <!--     <div class="project-card-links"> -->
+        <!--       <a href="#" class="project-card-link">[src]</a> -->
+        <!--       <a href="#" class="project-card-link">[live]</a> -->
+        <!--     </div> -->
+        <!--   </div> -->
+        <!--   <div class="project-card-body"> -->
+        <!--     <div class="project-card-name">Project Name</div> -->
+        <!--     <div class="project-card-desc"> -->
+        <!--       Describe the project: what problem it solves, what you learned building it, and what makes it interesting. -->
+        <!--     </div> -->
+        <!--     <div class="project-card-tech"> -->
+        <!--       <span>Tech 1</span> -->
+        <!--       <span>&middot;</span> -->
+        <!--       <span>Tech 2</span> -->
+        <!--     </div> -->
+        <!--   </div> -->
+        <!-- </div> -->
 
       </div>
-
     </div>
-  </div>
 
-  <!-- Statusline -->
-  <div class="statusline">
-    <div class="st-mode">NORMAL</div>
-    <div class="statusline-section st-file">~/projects</div>
-    <div class="st-right">
-      <div class="st-pos">Ln 1, Col 1</div>
-      <div class="st-filetype">markdown</div>
+    <!-- Statusline -->
+    <div class="statusline">
+      <div class="st-mode">NORMAL</div>
+      <div class="statusline-section st-file">~/projects</div>
+      <div class="st-right">
+        <div class="st-pos">Ln 1, Col 1</div>
+        <div class="st-filetype">markdown</div>
+      </div>
     </div>
-  </div>
 
-  <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
