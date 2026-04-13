@@ -1,3 +1,13 @@
 # Claude
-
 CLAUDE.md
+
+# Mac Specifig
+.DS_Store
+
+# Jekyll
+_site
+.sass-cache
+.jekyll-metadata
+
+# Node
+node_modules

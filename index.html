@@ -1,177 +1,215 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temuulen Enkhtamir</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temuulen Enkhtamir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" media="print"
-    onload="this.media='all'">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <!-- Grid background -->
+    <div class="nvim-bg"></div>
 
-<body>
-
-  <!-- Grid background -->
-  <div class="nvim-bg"></div>
-
-  <!-- Tab bar / Nav -->
-  <nav class="page-nav">
-    <div class="page-nav-tabs">
-      <a href="index.html" class="page-nav-tab active">
-        <span class="page-nav-tab-icon" style="color: var(--blue);">&#9679;</span> dashboard
-      </a>
-      <a href="about.html" class="page-nav-tab">
-        <span class="page-nav-tab-icon" style="color: var(--purple);">&#9679;</span> about
-      </a>
-      <a href="projects.html" class="page-nav-tab">
-        <span class="page-nav-tab-icon" style="color: var(--yellow);">&#9679;</span> projects
-      </a>
-      <a href="blog/index.html" class="page-nav-tab">
-        <span class="page-nav-tab-icon" style="color: var(--green);">&#9679;</span> blog
-      </a>
-    </div>
-    <div class="page-nav-right">
-      <span id="mobile-toggle" style="cursor: pointer; display: none;">&#9776;</span>
-    </div>
-  </nav>
-
-  <!-- NvDash -->
-  <main class="nvdash">
-
-    <!-- ASCII Art Logo -->
-    <div class="ascii-art" aria-hidden="true">
-      <pre id="ascii-output"></pre>
-    </div>
-
-    <!-- Profile picture -->
-    <img src="assets/images/profile.jpg" alt="Temuulen Enkhtamir" class="nvdash-avatar">
-
-    <!-- Name & tagline -->
-    <h1 class="nvdash-name">TEMUULEN ENKHTAMIR</h1>
-    <div class="nvdash-tagline">
-      <p>
-        Welcome to my personal website!
-      </p>
-      <p>
-        Here I will share blogs, experiences, and life.
-      </p>
-    </div>
-
-    <!-- Dashboard Menu -->
-    <nav class="nvdash-menu">
-      <a href="about.html" class="nvdash-item">
-        <span class="nvdash-icon"><i class="nf nf-oct-person"></i></span>
-        <span class="nvdash-label">About Me</span>
-        <span class="nvdash-key">SPC a m</span>
-      </a>
-      <a href="projects.html" class="nvdash-item">
-        <span class="nvdash-icon"><i class="nf nf-fa-code"></i></span>
-        <span class="nvdash-label">Find Projects</span>
-        <span class="nvdash-key">SPC f p</span>
-      </a>
-      <a href="blog/index.html" class="nvdash-item">
-        <span class="nvdash-icon"><i class="nf nf-fa-book"></i></span>
-        <span class="nvdash-label">Read Blog</span>
-        <span class="nvdash-key">SPC f b</span>
-      </a>
-      <a href="https://github.com/Ar-temis" class="nvdash-item">
-        <span class="nvdash-icon"><i class="nf nf-fa-github"></i></span>
-        <span class="nvdash-label">GitHub</span>
-        <span class="nvdash-key">SPC g h</span>
-      </a>
-      <a href="https://www.linkedin.com/in/e-temuulen/" class="nvdash-item">
-        <span class="nvdash-icon"><i class="nf nf-fa-linkedin"></i></span>
-        <span class="nvdash-label">LinkedIn</span>
-        <span class="nvdash-key">SPC l i</span>
-      </a>
-      <a href="mailto:temuulen.enkhtamir@dukekunshan.edu.cn" class="nvdash-item">
-        <span class="nvdash-icon"><i class="nf nf-fa-envelope"></i></span>
-        <span class="nvdash-label">Contact</span>
-        <span class="nvdash-key">SPC c m</span>
-      </a>
+    <!-- Tab bar / Nav -->
+    <nav class="page-nav">
+      <div class="page-nav-tabs">
+        <a href="index.html" class="page-nav-tab active">
+          <span class="page-nav-tab-icon" style="color: var(--blue)"
+            >&#9679;</span
+          >
+          dashboard
+        </a>
+        <a href="about.html" class="page-nav-tab">
+          <span class="page-nav-tab-icon" style="color: var(--purple)"
+            >&#9679;</span
+          >
+          about
+        </a>
+        <a href="projects.html" class="page-nav-tab">
+          <span class="page-nav-tab-icon" style="color: var(--yellow)"
+            >&#9679;</span
+          >
+          projects
+        </a>
+        <a href="blog/index.html" class="page-nav-tab">
+          <span class="page-nav-tab-icon" style="color: var(--green)"
+            >&#9679;</span
+          >
+          blog
+        </a>
+      </div>
+      <div class="page-nav-right">
+        <span id="mobile-toggle" style="cursor: pointer; display: none"
+          >&#9776;</span
+        >
+      </div>
     </nav>
 
-  </main>
+    <!-- NvDash -->
+    <main class="nvdash">
+      <!-- ASCII Art Logo -->
+      <div class="ascii-art" aria-hidden="true">
+        <pre id="ascii-output"></pre>
+      </div>
 
-  <!-- Statusline -->
-  <div class="statusline">
-    <div class="st-mode">NORMAL</div>
-    <div class="statusline-section st-file">~/portfolio</div>
-    <div class="st-right">
-      <div class="st-pos">Ln 1, Col 1</div>
-      <div class="st-filetype">dashboard</div>
+      <!-- Profile picture -->
+      <img
+        src="assets/images/profile.webp"
+        alt="Temuulen Enkhtamir's profile picture"
+        class="nvdash-avatar"
+        fetchpriority="high"
+      />
+
+      <!-- Name & tagline -->
+      <h1 class="nvdash-name">TEMUULEN ENKHTAMIR</h1>
+      <div class="nvdash-tagline">
+        <p>Welcome to my personal website!</p>
+        <p>Here I will share blogs, experiences, and life.</p>
+      </div>
+
+      <!-- Dashboard Menu -->
+      <nav class="nvdash-menu">
+        <a href="about.html" class="nvdash-item">
+          <span class="nvdash-icon"><i class="nf nf-oct-person"></i></span>
+          <span class="nvdash-label">About Me</span>
+          <span class="nvdash-key">SPC a m</span>
+        </a>
+        <a href="projects.html" class="nvdash-item">
+          <span class="nvdash-icon"><i class="nf nf-fa-code"></i></span>
+          <span class="nvdash-label">Find Projects</span>
+          <span class="nvdash-key">SPC f p</span>
+        </a>
+        <a href="blog/index.html" class="nvdash-item">
+          <span class="nvdash-icon"><i class="nf nf-fa-book"></i></span>
+          <span class="nvdash-label">Read Blog</span>
+          <span class="nvdash-key">SPC f b</span>
+        </a>
+        <a href="https://github.com/Ar-temis" class="nvdash-item">
+          <span class="nvdash-icon"><i class="nf nf-fa-github"></i></span>
+          <span class="nvdash-label">GitHub</span>
+          <span class="nvdash-key">SPC g h</span>
+        </a>
+        <a href="https://www.linkedin.com/in/e-temuulen/" class="nvdash-item">
+          <span class="nvdash-icon"><i class="nf nf-fa-linkedin"></i></span>
+          <span class="nvdash-label">LinkedIn</span>
+          <span class="nvdash-key">SPC l i</span>
+        </a>
+        <a
+          href="mailto:temuulen.enkhtamir@dukekunshan.edu.cn"
+          class="nvdash-item"
+        >
+          <span class="nvdash-icon"><i class="nf nf-fa-envelope"></i></span>
+          <span class="nvdash-label">Contact</span>
+          <span class="nvdash-key">SPC c m</span>
+        </a>
+      </nav>
+    </main>
+
+    <!-- Statusline -->
+    <div class="statusline">
+      <div class="st-mode">NORMAL</div>
+      <div class="statusline-section st-file">~/portfolio</div>
+      <div class="st-right">
+        <div class="st-pos">Ln 1, Col 1</div>
+        <div class="st-filetype">dashboard</div>
+      </div>
     </div>
-  </div>
 
-  <script>
-    // Vim-style hotkeys: SPC + two-key sequence
-    let waitingForSeq = false;
-    let seqBuffer = '';
-    let seqTimeout = null;
+    <script>
+      // Vim-style hotkeys: SPC + two-key sequence
+      let waitingForSeq = false;
+      let seqBuffer = "";
+      let seqTimeout = null;
 
-    const keymap = {
-      'am': 'about.html',
-      'fp': 'projects.html',
-      'fb': 'blog/index.html',
-      'gh': 'https://github.com/Ar-temis',
-      'li': 'https://www.linkedin.com/in/e-temuulen/',
-      'cm': 'mailto:temuulen.enkhtamir@dukekunshan.edu.cn',
-    };
+      const keymap = {
+        am: "about.html",
+        fp: "projects.html",
+        fb: "blog/index.html",
+        gh: "https://github.com/Ar-temis",
+        li: "https://www.linkedin.com/in/e-temuulen/",
+        cm: "mailto:temuulen.enkhtamir@dukekunshan.edu.cn",
+      };
 
-    // Update statusline mode indicator
-    const modeEl = document.querySelector('.st-mode');
+      // Update statusline mode indicator
+      const modeEl = document.querySelector(".st-mode");
 
-    document.addEventListener('keydown', (e) => {
-      // Ignore if user is typing in an input
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      document.addEventListener("keydown", (e) => {
+        // Ignore if user is typing in an input
+        if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")
+          return;
 
-      if (!waitingForSeq && e.key === ' ') {
-        e.preventDefault();
-        waitingForSeq = true;
-        seqBuffer = '';
-        if (modeEl) {modeEl.textContent = 'PENDING'; modeEl.style.backgroundColor = 'var(--yellow)';}
-        seqTimeout = setTimeout(() => {
-          waitingForSeq = false;
-          seqBuffer = '';
-          if (modeEl) {modeEl.textContent = 'NORMAL'; modeEl.style.backgroundColor = 'var(--green)';}
-        }, 1500);
-        return;
-      }
-
-      if (waitingForSeq) {
-        e.preventDefault();
-        seqBuffer += e.key.toLowerCase();
-
-        if (seqBuffer.length >= 2) {
-          clearTimeout(seqTimeout);
-          waitingForSeq = false;
-          const target = keymap[seqBuffer];
-          if (target) {
-            if (modeEl) {modeEl.textContent = 'LOADING'; modeEl.style.backgroundColor = 'var(--blue)';}
-            if (target.startsWith('http')) {
-              window.open(target, '_blank');
-              if (modeEl) {modeEl.textContent = 'NORMAL'; modeEl.style.backgroundColor = 'var(--green)';}
-            } else if (target !== '#') {
-              window.location.href = target;
-            } else {
-              if (modeEl) {modeEl.textContent = 'NORMAL'; modeEl.style.backgroundColor = 'var(--green)';}
-            }
-          } else {
-            if (modeEl) {modeEl.textContent = 'NORMAL'; modeEl.style.backgroundColor = 'var(--green)';}
+        if (!waitingForSeq && e.key === " ") {
+          e.preventDefault();
+          waitingForSeq = true;
+          seqBuffer = "";
+          if (modeEl) {
+            modeEl.textContent = "PENDING";
+            modeEl.style.backgroundColor = "var(--yellow)";
           }
-          seqBuffer = '';
+          seqTimeout = setTimeout(() => {
+            waitingForSeq = false;
+            seqBuffer = "";
+            if (modeEl) {
+              modeEl.textContent = "NORMAL";
+              modeEl.style.backgroundColor = "var(--green)";
+            }
+          }, 1500);
+          return;
         }
-      }
-    });
-  </script>
-</body>
 
+        if (waitingForSeq) {
+          e.preventDefault();
+          seqBuffer += e.key.toLowerCase();
+
+          if (seqBuffer.length >= 2) {
+            clearTimeout(seqTimeout);
+            waitingForSeq = false;
+            const target = keymap[seqBuffer];
+            if (target) {
+              if (modeEl) {
+                modeEl.textContent = "LOADING";
+                modeEl.style.backgroundColor = "var(--blue)";
+              }
+              if (target.startsWith("http")) {
+                window.open(target, "_blank");
+                if (modeEl) {
+                  modeEl.textContent = "NORMAL";
+                  modeEl.style.backgroundColor = "var(--green)";
+                }
+              } else if (target !== "#") {
+                window.location.href = target;
+              } else {
+                if (modeEl) {
+                  modeEl.textContent = "NORMAL";
+                  modeEl.style.backgroundColor = "var(--green)";
+                }
+              }
+            } else {
+              if (modeEl) {
+                modeEl.textContent = "NORMAL";
+                modeEl.style.backgroundColor = "var(--green)";
+              }
+            }
+            seqBuffer = "";
+          }
+        }
+      });
+    </script>
+  </body>
 </html>
