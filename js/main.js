@@ -16,5 +16,3 @@ if (mobileToggle) {
     if (mobileMenu) mobileMenu.classList.toggle('open');
   });
 }
-
-}
