@@ -5,5 +5,12 @@
     "date": "2026-04-12",
     "readTime": "3 min read",
     "description": "Welcome to my blog! This is where I'll share my thoughts on technology, projects I'm working on, and things I'm learning along the way."
+  },
+  {
+    "slug": "learning-swe",
+    "title": "Should I be learning carpentry?",
+    "date": "2026-04-14",
+    "readTime": "5 min read",
+    "description": "My take of how it is like to learn software engineering in the age of AI, and my worries."
   }
 ]

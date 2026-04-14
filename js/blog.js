@@ -13,7 +13,7 @@
 // Configure marked for clean output
 if (typeof marked !== 'undefined') {
   marked.setOptions({
-    breaks: true,
+    breaks: false,
     gfm: true,
   });
 }
