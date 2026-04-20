@@ -12,5 +12,12 @@
     "date": "2026-04-14",
     "readTime": "5 min read",
     "description": "My take of how it is like to learn software engineering in the age of AI, and my worries."
+  },
+  {
+    "slug": "readings",
+    "title": "SWE Reading List",
+    "date": "2026-04-15",
+    "readTime": "2 min read",
+    "description": "A list of readings I've been reading lately."
   }
 ]
