@@ -1,207 +1,304 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Temuulen Enkhtamir</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Temuulen Enkhtamir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" media="print"
-    onload="this.media='all'">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <!-- Grid background -->
+    <div class="nvim-bg"></div>
 
-<body>
-
-  <!-- Grid background -->
-  <div class="nvim-bg"></div>
-
-  <!-- Tab bar / Nav -->
-  <nav class="page-nav">
-    <div class="page-nav-tabs">
-      <a href="index.html" class="page-nav-tab">
-        <span class="page-nav-tab-icon" style="color: var(--blue);">&#9679;</span> dashboard
-      </a>
-      <a href="about.html" class="page-nav-tab">
-        <span class="page-nav-tab-icon" style="color: var(--purple);">&#9679;</span> about
-      </a>
-      <a href="projects.html" class="page-nav-tab active">
-        <span class="page-nav-tab-icon" style="color: var(--yellow);">&#9679;</span> projects
-      </a>
-      <a href="blog/index.html" class="page-nav-tab">
-        <span class="page-nav-tab-icon" style="color: var(--green);">&#9679;</span> blog
-      </a>
-    </div>
-    <div class="page-nav-right">
-      <span id="mobile-toggle" style="cursor: pointer; display: none;">&#9776;</span>
-    </div>
-  </nav>
-
-  <!-- Mobile drawer -->
-  <div id="mobile-menu" class="mobile-drawer">
-    <a href="index.html">&#9656; Dashboard</a>
-    <a href="about.html">&#9656; About</a>
-    <a href="projects.html" class="active">&#9656; Projects</a>
-    <a href="blog/index.html">&#9656; Blog</a>
-  </div>
-
-  <!-- Page content -->
-  <div class="page-content">
-    <div style="max-width: 800px; margin: 0 auto; padding: 1.5rem;">
-
-      <!-- Education Section -->
-      <div class="section-header">Education</div>
-
-      <div class="exp-tree">
-
-        <!-- Experience Item 1 (placeholder) -->
-        <div class="exp-tree-item">
-          <div class="exp-tree-branch">&#9492;&#9472;</div>
-          <div class="exp-tree-content">
-            <div class="exp-tree-title">Dual B.S. Degree, Applied Mathematics and Computational Sciences</div>
-            <div class="exp-tree-company">Duke University</div>
-            <div class="exp-tree-period">Aug 2023 - May 2027</div>
-          </div>
-        </div>
-
+    <!-- Tab bar / Nav -->
+    <nav class="page-nav">
+      <div class="page-nav-tabs">
+        <a href="index.html" class="page-nav-tab">
+          <span class="page-nav-tab-icon" style="color: var(--blue)"
+            >&#9679;</span
+          >
+          dashboard
+        </a>
+        <a href="about.html" class="page-nav-tab">
+          <span class="page-nav-tab-icon" style="color: var(--purple)"
+            >&#9679;</span
+          >
+          about
+        </a>
+        <a href="projects.html" class="page-nav-tab active">
+          <span class="page-nav-tab-icon" style="color: var(--yellow)"
+            >&#9679;</span
+          >
+          projects
+        </a>
+        <a href="blog/index.html" class="page-nav-tab">
+          <span class="page-nav-tab-icon" style="color: var(--green)"
+            >&#9679;</span
+          >
+          blog
+        </a>
       </div>
-
-      <!-- Experience Section -->
-      <div class="section-header">Experience</div>
-
-      <div class="exp-tree">
-
-        <!-- Experience Item 1 (placeholder) -->
-        <div class="exp-tree-item">
-          <div class="exp-tree-branch">&#9500;&#9472;</div>
-          <div class="exp-tree-content">
-            <div class="exp-tree-title">Project Manager / Software Engineer</div>
-            <div class="exp-tree-company"><a href="https://chatdku.com" target="_blank">ChatDKU.com</a></div>
-            <div class="exp-tree-period">March 2025 - Present</div>
-            <div class="exp-tree-desc">
-              Developed ChatDKU.com, a campus-wide agentic <u><b>Retrieval-Augmented Generation (RAG)</b></u> chatbot
-              that
-              serves
-              the
-              daily queries of <b>2,000</b> students and faculty. Secured <b>$100,000 in university funding</b> to
-              support a
-              locally hosted LLM inference server. Since becoming project manager in December 2025, led a
-              12-student team by implementing <b>Agile workflows</b> and overseeing stand-ups and sprint planning. Also
-              designed the core agent logic and tool orchestration system, enabling the LLM to dynamically select,
-              invoke, and chain specialized tools for complex multi-step reasoning, while building ingestion pipelines
-              with LlamaIndex and LangChain to process and embed diverse documents into a Chroma vector database with
-              Redis supporting keyword search.
-            </div>
-          </div>
-        </div>
-
-        <!-- Experience Item 2 (placeholder) -->
-        <div class="exp-tree-item">
-          <div class="exp-tree-branch">&#9492;&#9472;</div>
-          <div class="exp-tree-content">
-            <div class="exp-tree-title">Teaching Assistant</div>
-            <div class="exp-tree-company">CS204: Intro to AI</div>
-            <div class="exp-tree-period">January 2026 - March 2026</div>
-            <div class="exp-tree-desc">
-              Taught Reinforcement Learning concepts such as MDP, Value/Policy Iterations, Monte-Carlo, TD
-              learning, and Q learning.
-              Designed homeworks and coding projects for students to practically learn heavy math concepts in
-              bite-sized code.
-            </div>
-          </div>
-        </div>
-
+      <div class="page-nav-right">
+        <span id="mobile-toggle" style="cursor: pointer; display: none"
+          >&#9776;</span
+        >
       </div>
+    </nav>
 
-      <!-- Projects Section -->
-      <div class="section-header">Projects</div>
+    <!-- Mobile drawer -->
+    <div id="mobile-menu" class="mobile-drawer">
+      <a href="index.html">&#9656; Dashboard</a>
+      <a href="about.html">&#9656; About</a>
+      <a href="projects.html" class="active">&#9656; Projects</a>
+      <a href="blog/index.html">&#9656; Blog</a>
+    </div>
 
-      <div class="project-list">
+    <!-- Page content -->
+    <div class="page-content">
+      <div style="max-width: 800px; margin: 0 auto; padding: 1.5rem">
+        <!-- Education Section -->
+        <div class="section-header">Education</div>
 
-        <!-- Project Card 1 -->
-        <div class="project-card">
-          <div class="project-card-header">
-            <span class="project-card-filename">DroneWQ</span>
-            <div class="project-card-links">
-              <a href="https://github.com/aewindle110/DroneWQ" class="project-card-link">[src]</a>
-              <a href="https://pypi.org/project/dronewq/" class="project-card-link">[pypi]</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <div class="project-card-desc">
-              Developed a python package, under the guidance of <a href="https://annaewindle.com/">Prof. Anna Windle</a>
-              from NASA, that can be used to
-              analyze multi-spectral data collected from a drone to derive ocean color radiometry and water quality
-              properties.
-              Made a desktop front-end using Electron for this package, and built an ArcGIS plugin for generating
-              water-quality maps.
-              Led the architectural refactor of a legacy monolithic codebase into a modular OOP system, improving
-              maintainability, scalability, and achieving a 100× reduction in execution time.
-            </div>
-            <div class="project-card-tech">
-              <span>Python</span>
-              <span>&middot;</span>
-              <span>Numpy</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card 2 -->
-        <div class="project-card">
-          <div class="project-card-header">
-            <span class="project-card-filename">Course Recommendation</span>
-            <div class="project-card-links">
-              <a href="https://github.com/Ar-temis/Course-Recommendation" class="project-card-link">[src]</a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <div class="project-card-desc">
-              As a student you have to find what courses are available, which ones go together, and which ones you need
-              for you major. Finally, you have to schedule them, and if they don't match you find yourself back at
-              square one.
-
-              So, what if there was an assistant that just gives you all the available options and you choose from
-              there? That's what my AI assistant is exactly doing for you.
-
-            </div>
-            <div class="project-card-tech">
-              <span>LLM</span>
-              <span>&middot;</span>
-              <span>SQL</span>
-              <span>&middot;</span>
-              <span>Python</span>
+        <div class="exp-tree">
+          <!-- Experience Item 1 (placeholder) -->
+          <div class="exp-tree-item">
+            <div class="exp-tree-branch">&#9492;&#9472;</div>
+            <div class="exp-tree-content">
+              <div class="exp-tree-title">
+                Dual B.S. Degree, Applied Mathematics and Computational Sciences
+              </div>
+              <div class="exp-tree-company">
+                Duke University and Duke Kunshan University
+              </div>
+              <div class="exp-tree-period">Aug 2023 - May 2027</div>
             </div>
           </div>
         </div>
 
-        <!-- Project Card 3 -->
-        <!-- <div class="project-card"> -->
-        <!--   <div class="project-card-header"> -->
-        <!--     <span class="project-card-filename">project_3.ts</span> -->
-        <!--     <div class="project-card-links"> -->
-        <!--       <a href="#" class="project-card-link">[src]</a> -->
-        <!--       <a href="#" class="project-card-link">[live]</a> -->
-        <!--     </div> -->
-        <!--   </div> -->
-        <!--   <div class="project-card-body"> -->
-        <!--     <div class="project-card-name">Project Name</div> -->
-        <!--     <div class="project-card-desc"> -->
-        <!--       Describe the project: what problem it solves, what you learned building it, and what makes it interesting. -->
-        <!--     </div> -->
-        <!--     <div class="project-card-tech"> -->
-        <!--       <span>Tech 1</span> -->
-        <!--       <span>&middot;</span> -->
-        <!--       <span>Tech 2</span> -->
-        <!--     </div> -->
-        <!--   </div> -->
-        <!-- </div> -->
+        <!-- Experience Section -->
+        <div class="section-header">Experience</div>
 
+        <div class="exp-tree">
+          <!-- Experience Item 1 -->
+          <div class="exp-tree-item">
+            <div class="exp-tree-branch">&#9500;&#9472;</div>
+            <div class="exp-tree-content">
+              <div class="exp-tree-title">Software Developer</div>
+              <div class="exp-tree-company">AND Global Pte. Ltd</div>
+              <div class="exp-tree-period">
+                April 2026 - Present &middot; Remote
+              </div>
+              <div class="exp-tree-desc">
+                Building integration services for the core Loan Origination and
+                Management system of one of
+                <b>Vietnam's largest banks</b>, owning consent management, NAPAS
+                verification, and facematch identity verification to expand the
+                platform's KYC and payment capabilities. Integrated
+                revolving-loan servicing with the <b>Temenos T24</b> core
+                banking system, implementing account creation, credit limit
+                setup, arrangement architecture, and disbursement flows.
+                Implemented end-to-end mobile contract e-signing across the
+                integration service and contract manager back-end, adding
+                platform detection to route web vs. mobile signing flows.
+                Contributed across <b>8+ microservices</b> spanning the
+                integration layer, state machine, rule engine, and data storage
+                in a 3-month internship. Also executed stress testing and system
+                integration testing (SIT), resolving reported defects ahead of
+                release.
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 2 -->
+          <div class="exp-tree-item">
+            <div class="exp-tree-branch">&#9500;&#9472;</div>
+            <div class="exp-tree-content">
+              <div class="exp-tree-title">
+                Project Manager / Software Engineer
+              </div>
+              <div class="exp-tree-company">
+                <a href="https://chatdku.com" target="_blank">ChatDKU.com</a>
+                &middot; DKU Edge Intelligence Lab
+              </div>
+              <div class="exp-tree-period">May 2025 - August 2026</div>
+              <div class="exp-tree-desc">
+                Developed ChatDKU.com, a campus-wide agentic
+                <u><b>Retrieval-Augmented Generation (RAG)</b></u> chatbot that
+                serves the daily queries of <b>2,000</b> students and faculty.
+                Secured <b>$100,000 in university funding</b> to support a
+                locally hosted LLM inference server. Since becoming project
+                manager in December 2025, led a 12-student team by implementing
+                <b>Agile workflows</b> and overseeing stand-ups and sprint
+                planning. Also designed the core agent logic and tool
+                orchestration system, enabling the LLM to dynamically select,
+                invoke, and chain specialized tools for complex multi-step
+                reasoning, while building ingestion pipelines with LlamaIndex
+                and LangChain to process and embed diverse documents into a
+                Chroma vector database with Redis supporting keyword search.
+                Built the backend on <b>Flask</b> before migrating to
+                <b>Django</b>, and automated and containerized the stack with
+                Docker and bash scripts.
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 3 -->
+          <div class="exp-tree-item">
+            <div class="exp-tree-branch">&#9492;&#9472;</div>
+            <div class="exp-tree-content">
+              <div class="exp-tree-title">Teaching Assistant</div>
+              <div class="exp-tree-company">CS204: Intro to AI</div>
+              <div class="exp-tree-period">January 2026 - March 2026</div>
+              <div class="exp-tree-desc">
+                Taught Reinforcement Learning concepts such as MDP, Value/Policy
+                Iterations, Monte-Carlo, TD learning, and Q learning. Designed
+                homeworks and coding projects for students to practically learn
+                heavy math concepts in bite-sized code.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="section-header">Projects</div>
+
+        <div class="project-list">
+          <!-- Project Card 1 -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <span class="project-card-filename">DroneWQ</span>
+              <div class="project-card-links">
+                <a
+                  href="https://github.com/aewindle110/DroneWQ"
+                  class="project-card-link"
+                  >[src]</a
+                >
+                <a
+                  href="https://pypi.org/project/dronewq/"
+                  class="project-card-link"
+                  >[pypi]</a
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-desc">
+                Developed a python package, under the guidance of
+                <a href="https://annaewindle.com/">Prof. Anna Windle</a>
+                from NASA, that can be used to analyze multi-spectral data
+                collected from a drone to derive ocean color radiometry and
+                water quality properties. Made a desktop front-end using
+                Electron for this package, and built an ArcGIS plugin for
+                generating water-quality maps. Led the architectural refactor of
+                a legacy monolithic codebase into a modular OOP system,
+                improving maintainability, scalability, and achieving a 100×
+                reduction in execution time. A paper on the package is currently
+                submitted to JOSS and under review.
+              </div>
+              <div class="project-card-tech">
+                <span>Python</span>
+                <span>&middot;</span>
+                <span>Numpy</span>
+                <span>&middot;</span>
+                <span>Electron</span>
+                <span>&middot;</span>
+                <span>ArcGIS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <span class="project-card-filename">Course Recommendation</span>
+              <div class="project-card-links">
+                <a
+                  href="https://github.com/Ar-temis/Course-Recommendation"
+                  class="project-card-link"
+                  >[src]</a
+                >
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-desc">
+                As a student you have to find what courses are available, which
+                ones go together, and which ones you need for you major.
+                Finally, you have to schedule them, and if they don't match you
+                find yourself back at square one. So, what if there was an
+                assistant that just gives you all the available options and you
+                choose from there? That's what my AI assistant is exactly doing
+                for you.
+              </div>
+              <div class="project-card-tech">
+                <span>LLM</span>
+                <span>&middot;</span>
+                <span>SQL</span>
+                <span>&middot;</span>
+                <span>Python</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <!-- <div class="project-card"> -->
+          <!--   <div class="project-card-header"> -->
+          <!--     <span class="project-card-filename">project_3.ts</span> -->
+          <!--     <div class="project-card-links"> -->
+          <!--       <a href="#" class="project-card-link">[src]</a> -->
+          <!--       <a href="#" class="project-card-link">[live]</a> -->
+          <!--     </div> -->
+          <!--   </div> -->
+          <!--   <div class="project-card-body"> -->
+          <!--     <div class="project-card-name">Project Name</div> -->
+          <!--     <div class="project-card-desc"> -->
+          <!--       Describe the project: what problem it solves, what you learned building it, and what makes it interesting. -->
+          <!--     </div> -->
+          <!--     <div class="project-card-tech"> -->
+          <!--       <span>Tech 1</span> -->
+          <!--       <span>&middot;</span> -->
+          <!--       <span>Tech 2</span> -->
+          <!--     </div> -->
+          <!--   </div> -->
+          <!-- </div> -->
+        </div>
+
+        <!-- Competitions Section -->
+        <div class="section-header">Competitions</div>
+
+        <div class="exp-tree">
+          <div class="exp-tree-item">
+            <div class="exp-tree-branch">&#9492;&#9472;</div>
+            <div class="exp-tree-content">
+              <div class="exp-tree-title">Team Leader</div>
+              <div class="exp-tree-company">HACKDKU</div>
+              <div class="exp-tree-period">
+                April 2025 &middot; Kunshan, China
+              </div>
+              <div class="exp-tree-desc">
+                Won <b>1st place</b> at the annual DKU Hackathon out of
+                <b>32 teams</b> for building an iOS app in under 24 hours to
+                combat household food waste. Users scan product barcodes to log
+                their food inventory, letting them see what actually needs
+                restocking and cut down on surplus food.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -216,6 +313,5 @@
     </div>
 
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
